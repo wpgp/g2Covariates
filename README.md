@@ -73,7 +73,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you use g2Covariates in your research, please cite:
 
-*Bondarenko M., Priyatikanto R., Zhang W., McKeen T., Nosatiuk B. and Tejedor-Garavito N. (2025). g2Covariates is an R package that provides easy access to various WorldPop geospatial covariates. (1.0.0) [Computer software]. GitHub. https://github.com/wpgp/g2Covariates*
+*Bondarenko M., Priyatikanto R., Zhang W., McKeen T., Nosatiuk B. and Tejedor-Garavito N. (2025). g2Covariates is an R package that provides easy access to various WorldPop geospatial covariates. (1.0.0) DOI: 10.5281/zenodo.15267943 [Computer software]. GitHub. https://github.com/wpgp/g2Covariates*
 
 
 ```bibtex
