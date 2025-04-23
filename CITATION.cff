@@ -1,0 +1,47 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  g2c_download is an R package that provides easy access to
+  various WorldPop geospatial covariates
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Maksym
+    family-names: Bondarenko
+    email: mb4@soton.ac.uk
+    orcid: 'https://orcid.org/0000-0003-4958-6551'
+    affiliation: WorldPop
+  - given-names: Wenbin
+    family-names: Zhang
+    email: zwb1027@gmail.com
+    affiliation: WorldPop
+    orcid: 'https://orcid.org/0000-0002-9295-1019'
+  - given-names: Natalia
+    family-names: Tejedor-Garavito
+    email: n.tejedor-garavito@soton.ac.uk
+    orcid: 'https://orcid.org/0000-0002-1140-6263'
+    affiliation: WorldPop
+  - given-names: Tom
+    family-names: McKeen
+    email: t.l.mckeen@soton.ac.uk
+    affiliation: WorldPop
+  - given-names: Borys
+    family-names: Nosatiuk
+    email: b.nosatiuk@soton.ac.uk
+    affiliation: WorldPop
+  - given-names: Rhorom
+    family-names: Priyatikanto
+    email: rhorom.priyatikanto@soton.ac.uk
+    orcid: 'https://orcid.org/0000-0003-1203-2651'
+    affiliation: WorldPop
+identifiers:
+  - type: url
+    value: 'https://github.com/wpgp/g2Covariates'
+repository-code: 'https://github.com/wpgp/g2Covariates'
+license: MIT
+version: v1.0.0
+date-released: '2025-04-23'

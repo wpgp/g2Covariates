@@ -1,0 +1,60 @@
+Package: g2Covariates
+Type: Package
+Title: g2Covariates is an R package that provides easy access to various WorldPop geospatial covariates
+Version: 1.0.0
+Authors@R: c(
+   person( 
+          given = "Maksym", 
+          family = "Bondarenko", 
+          role = c("aut", "cre", "cph"), 
+          email = "mb4@soton.ac.uk", 
+          comment = c(ORCID = "0000-0003-4958-6551")
+          ),
+   person( 
+          given = "Wenbin", 
+          family = "Zhang", 
+          role = c("ctb"), 
+          email = "zwb1027@gmail.com", 
+          comment = c(ORCID = "0000-0002-9295-1019")
+          ),
+   person( 
+          given = "Natalia", 
+          family = "Tejedor-Garavito", 
+          role = c("ctb"), 
+          email = "n.tejedor-garavito@soton.ac.uk", 
+          comment = c(ORCID = "0000-0002-1140-6263")
+          ),
+   person( 
+          given = "Tom", 
+          family = "McKeen", 
+          role = c("ctb"), 
+          email = "t.l.mckeen@soton.ac.uk"
+          ),
+    person( 
+          given = "Borys", 
+          family = "Nosatiuk", 
+          role = c("ctb"), 
+          email = "b.nosatiuk@soton.ac.uk",
+          comment = c(GitHub = "borys-33")
+          ),
+    person( 
+          given = "Rhorom", 
+          family = "Priyatikanto", 
+          role = c("ctb"), 
+          email = "rhorom.priyatikanto@soton.ac.uk",
+          comment = c(ORCID = "0000-0003-1203-2651")
+          )            
+    )
+Maintainer: Maksym Bondarenko <mb4@soton.ac.uk> 
+Description: g2Covariates is an R package that provides easy access to various WorldPop geospatial covariates. 
+URL: https://github.com/wpgp/g2Covariates
+BugReports: https://github.com/wpgp/g2Covariates/issues
+Imports: 
+    jsonlite,
+    parallel, 
+    utils
+Depends: R (>= 3.2.0)
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
