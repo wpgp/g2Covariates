@@ -83,7 +83,7 @@ If you use g2Covariates in your research, please cite:
 	year         = 2025,
 	month        = 4,
 	publisher    = {GitHub},
-	doi          = {},
+	doi          = {10.5281/zenodo.15267943},
 	url          = {https://github.com/wpgp/g2Covariates},
 	version      = {1.0.0}
 }
