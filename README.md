@@ -1,6 +1,6 @@
 
 
-# g2c_download
+# g2Covariates
 
 g2c_download is an R package that provides easy access to various WorldPop geospatial covariates.
 
@@ -10,7 +10,7 @@ To install the package from GitHub, first ensure you have the `devtools` package
 
 ```r
 install.packages("devtools")  # Install devtools if not already installed
-devtools::install_github("wpgp/g2c_download")
+devtools::install_github("wpgp/g2Covariates")
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ devtools::install_github("wpgp/g2c_download")
 Once installed, load the package in your R session:
 
 ```r
-library(g2c_download)
+library(g2Covariates)
 ```
 
 ### Functions avaliable
