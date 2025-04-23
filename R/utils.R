@@ -24,7 +24,7 @@ getExtension <- function(f){
 #' @export
 get_global_nb <- function(){
 
-  x <- jsonlite::fromJSON("data/Global_nb_db.json")
+  x <- jsonlite::fromJSON(system.file("data", "Global_nb_db.json", package = "g2Covariates"))
 
   return(x)
 }
