@@ -1,4 +1,4 @@
-
+[![DOI](https://zenodo.org/badge/971251461.svg)](https://doi.org/10.5281/zenodo.15267942)
 
 # g2Covariates
 
