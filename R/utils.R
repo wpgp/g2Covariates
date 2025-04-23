@@ -24,7 +24,7 @@ getExtension <- function(f){
 #' @export
 get_global_nb <- function(){
 
-  x <- jsonlite::fromJSON("data/Global_nb_db_mini.json")
+  x <- jsonlite::fromJSON("data/Global_nb_db.json")
 
   return(x)
 }
