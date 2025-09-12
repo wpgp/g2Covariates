@@ -46,6 +46,38 @@ nb_countries[["NPL"]]
 [1] "CHN" "IND"
  ```
 
+### Function to automate downloading one covariate across multiple years
+```
+g2c_download_years(
+  covariate = "viirs_nvf", 
+  ISO = "THA",
+  years = 2015:2024,
+  output_dir = output_path
+)
+ ```  
+
+### Function to automate downloading all available covariates for a particular `all_covs` (Single Year)
+# Get the list of all covariates
+all_covs <- get_names_covariates()
+``` 
+g2c_download_all_covs(
+  ISO = "THA",
+  year = 2020,
+  output_dir = output_path,
+  rst_mask = shp_file
+)
+
+``` 
+### Function to automate downloading all available covariates for all specified years `g2c_download_all()`
+``` 
+g2c_download_all(
+  ISO = "THA",
+  years = 2015:2016,
+  output_dir = output_path
+)
+
+``` 
+
 ## Dependencies
 
 This package requires the following R packages:
