@@ -115,26 +115,36 @@ g2c_download_years(
 
 ## All COVARIATES for a ONE YEAR with USER OWN Shapefiles
 
-# Get the list of all covariates
-all_covs <- get_names_covariates()
+g2c_download_all_covs <- function(ISO, year, output_dir, rst_mask = NULL, quiet = FALSE) {
+  
+  all_covs <- get_names_covariates()
+  
+  for (cov in all_covs) {
+    message("Downloading: ", cov)
+    tryCatch({
+      g2c_download(
+        covariate = cov,
+        ISO = ISO,
+        prj_year = year,
+        ftp_srv = FALSE,       ## avoids FTP by default
+        rst_mask = rst_mask,
+        output_dir = output_dir,
+        quiet = quiet
+      )
+    }, error = function(e) {
+      message("Failed: ", cov, " | ", e$message)
+    })
+  }
+}
+
 
 # Function call
-for (cov in all_covs) {
-  message("Downloading: ", cov)
-  tryCatch({
-    g2c_download(
-      covariate = cov,
-      ISO = "THA",
-      prj_year = 2020,
-      ftp_srv = FALSE,              ## if you want to avoid downloading from ftp
-      rst_mask = shp_file, 
-      output_dir = output_path
-      # quiet = FALSE
-    )
-  }, error = function(e) {
-    message("Failed: ", cov, " | ", e$message)
-  })
-}
+g2c_download_all_covs(
+  ISO = "THA",
+  year = 2020,
+  output_dir = output_path,
+  rst_mask = shp_file
+)
 
 
 
