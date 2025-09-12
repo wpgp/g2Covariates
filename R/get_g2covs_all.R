@@ -22,7 +22,7 @@ input_path <- paste0(dir_path, "/add your boundary shapefile path")
 # shp_file <- paste0(input_path, "/TAM_10_12.shp")
 #========================================================================
 
-## Package overview
+## Package overview (Example using Thailand - THA)
 
 # Get names of all WorldPop covariates
 get_names_covariates()
