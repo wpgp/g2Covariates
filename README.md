@@ -46,7 +46,7 @@ nb_countries[["NPL"]]
 [1] "CHN" "IND"
  ```
 
-### Function to automate downloading one covariate across multiple years `g2c_download_years()`
+### Function to automate downloading one covariate across multiple years
 ```
 g2c_download_years(
   covariate = "viirs_nvf", 
@@ -77,7 +77,6 @@ g2c_download_all(
 )
 
 ``` 
-
 
 ## Dependencies
 
