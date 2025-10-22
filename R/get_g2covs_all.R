@@ -1,83 +1,4 @@
-#========================================================================
-# https://github.com/wpgp/g2Covariates    GITHUB Repository
 
-## Install packages
-install.packages("devtools")  # Install devtools if not already installed
-
-library(devtools)
-install_github("wpgp/g2Covariates")
-
-# NOTE: install.packages(c("terra", "jsonlite")) if not installed
-#========================================================================
-
-# Initialise library
-library(g2Covariates)
-library(sf)
-
-# Set paths
-dir_path <- "add your directory path"
-output_path <- paste0(dir_path, "/add your output storage path")
-
-input_path <- paste0(dir_path, "/add your boundary shapefile path")
-# shp_file <- paste0(input_path, "/TAM_10_12.shp")
-#========================================================================
-
-## Package overview (Example using Thailand - THA)
-
-# Get names of all WorldPop covariates
-get_names_covariates()
-
-# Get names of neighbouring countries
-nb_countries <- get_global_nb()
-nb_countries[["THA"]]
-
-#========================================================================
-
-## One COVARIATE for a particular YEAR with WorldPop BOUNDARY Shapefiles
-
-# Night Light Intensity
-g2c_download(covariate = "viirs_nvf", 
-             ISO = "THA", 
-             prj_year = 2018,  # Need to add (currently one year at a time)
-             ftp_srv = FALSE,       ## if you want to avoid downloading from ftp
-             rst_mask = NULL,
-             output_dir= output_path
-)
-
-# Building Count
-g2c_download(covariate = "building_count_gl_T_0_5", 
-             ISO = "THA", 
-             prj_year = 2018,  # 2015, 2020, 2030
-             ftp_srv = FALSE,       ## if you want to avoid downloading from ftp
-             rst_mask = NULL,
-             output_dir= output_path
-)
-
-#========================================================================
-
-## One COVARIATE for a particular YEAR with USER OWN Shapefiles
-
-#1 nonthaburi_boundary.shp
-
-#2 nonthaburi_adm2.shp
-
-#3 pilotEA_10_12_withData.shp   #### NOTE issues in gaps between polygons
-
-# Specify shapefile
-shp_file <- paste0(input_path, "/add your shapefile")
-shp <- st_read(shp_file)
-plot(shp$geometry)
-
-# Elevation
-g2c_download(covariate = "Elevation", 
-             ISO = "THA", 
-             prj_year = 2018,  
-             ftp_srv = FALSE,                  ## if you want to avoid downloading from ftp
-             rst_mask = shp_file,              # Single polygon   Multi-polygon
-             output_dir= output_path
-)
-
-#========================================================================
 
 ## One COVARIATE for ALL AVAILABLE YEARS
 
@@ -103,13 +24,6 @@ g2c_download_years <- function(covariate, ISO, years, output_dir, rst_mask = NUL
 }
 
 
-# Function call
-g2c_download_years(
-  covariate = "viirs_nvf",   # viirs_nvf
-  ISO = "THA",
-  years = 2015:2024,
-  output_dir = output_path
-)
 
 #========================================================================
 
@@ -138,13 +52,6 @@ g2c_download_all_covs <- function(ISO, year, output_dir, rst_mask = NULL, quiet 
 }
 
 
-# Function call
-g2c_download_all_covs(
-  ISO = "THA",
-  year = 2020,
-  output_dir = output_path,
-  rst_mask = shp_file
-)
 
 
 
@@ -175,11 +82,3 @@ g2c_download_all <- function(ISO, years, output_dir, rst_mask = NULL, quiet = FA
     }
   }
 }
-
-
-# Function call
-g2c_download_all(
-  ISO = "THA",
-  years = 2015:2016,
-  output_dir = output_path
-)
