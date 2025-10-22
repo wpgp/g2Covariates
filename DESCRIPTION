@@ -43,6 +43,13 @@ Authors@R: c(
           role = c("ctb"), 
           email = "rhorom.priyatikanto@soton.ac.uk",
           comment = c(ORCID = "0000-0003-1203-2651")
+          ),
+    person( 
+          given = "Somnath", 
+          family = "Chaudhuri", 
+          role = c("ctb"), 
+          email = "sc1f24@soton.ac.uk",
+          comment = c(ORCID = "0000-0003-4899-1870")
           )            
     )
 Maintainer: Maksym Bondarenko <mb4@soton.ac.uk> 

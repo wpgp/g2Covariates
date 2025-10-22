@@ -93,6 +93,9 @@ get_path_covariates <- function(ISO="NPL",
     "building_volume_gl_T_0_5"= if (prj_year > 2023) file.path(ISO, "buildings", "gl_v2_5", "T_0_5", "volume", paste0(tolower(ISO),"_buildings_volume_2023_glv2_5_t0_5_C_100m_v1.tif"))
     else if (prj_year < 2016) file.path(ISO, "buildings", "gl_v2_5", "T_0_5", "volume", paste0(tolower(ISO),"_buildings_volume_2016_glv2_5_t0_5_C_100m_v1.tif"))
     else file.path(ISO, "buildings", "gl_v2_5", "T_0_5", "volume", paste0(tolower(ISO),"_buildings_volume_",prj_year,"_glv2_5_t0_5_C_100m_v1.tif")),
+    "building_varh_gl_T_0_5"= if (prj_year > 2023) file.path(ISO, "buildings", "gl_v2_5", "T_0_5", "varh", paste0(tolower(ISO),"_buildings_varh_2023_glv2_5_t0_5_C_100m_v1.tif"))
+    else if (prj_year < 2016) file.path(ISO, "buildings", "gl_v2_5", "T_0_5", "varh", paste0(tolower(ISO),"_buildings_varh_2016_glv2_5_t0_5_C_100m_v1.tif"))
+    else file.path(ISO, "buildings", "gl_v2_5", "T_0_5", "varh", paste0(tolower(ISO),"_buildings_varh_",prj_year,"_glv2_5_t0_5_C_100m_v1.tif")),
     "building_count_ms_PIB"= file.path(ISO, "buildings", "ms", "PIB", "v1_1", paste0(tolower(ISO),"_buildings_count_PIB_ms_100m_v1_1.tif")),
     "building_cv_area_ms_PIB"= file.path(ISO, "buildings", "ms", "PIB", "v1_1", paste0(tolower(ISO),"_buildings_cv_area_PIB_ms_100m_v1_1.tif")),
     "building_cv_length_ms_PIB"= file.path(ISO, "buildings", "ms", "PIB", "v1_1", paste0(tolower(ISO),"_buildings_cv_length_PIB_ms_100m_v1_1.tif")),
